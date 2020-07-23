@@ -1,0 +1,43 @@
+.body{
+  background-color: #000;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.project-dets{
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+.project-dets ul{
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+}
+.project-dets ul li{
+  font-size: 70%;
+}
+.key{
+  font-weight: 700;
+}
+.value{
+  font-weight: 400;
+}
+img{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 1199px) {}
+
+@media all and (max-width: 991px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 575px) {}

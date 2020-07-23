@@ -1,0 +1,224 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+
+@font-face {
+  font-family: myFont;
+  src: url(./assets/font/tilte/Helvetica_Neue/HelveticaNeue.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  font-family: myFont;
+}
+
+body,
+html {
+  background-color: #000;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul.list-unstyled {
+  list-style: none;
+}
+
+/* Slide animation */
+.slideanim {
+  visibility: hidden;
+  visibility: visible\9;
+  /*For old IE browsers IE6-8 */
+}
+
+.slideanim.slide {
+  visibility: visible;
+  animation: slide 1s;
+}
+
+.slideanim::after {
+  /* useful when its child elements are float:left; */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Project pages styles */
+.project-body {
+  position: relative;
+  background-color: #000;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.project-body .project-dets {
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  width: 100%;
+}
+.project-body .project-dets ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project-body .project-dets ul li {
+  font-size: 70%;
+}
+.project-body .key {
+  font-weight: 700;
+}
+.project-body .value {
+  font-weight: 400;
+}
+.project-body .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-body img {
+  width: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.motion-project img {
+  width: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 900px;
+}
+
+/* Pop up images */
+.show {
+  z-index: 1000;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.show .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.66);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.show .img-show {
+  width: 600px;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-show span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  cursor: pointer;
+  color: #fff;
+}
+.img-show img {
+  max-width: 100%;
+  max-height: 90vh;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ********  STILL IMAGES PROJECTS STYLES  ******** */
+
+.image-gallery {
+  /* Prevent vertical gaps */
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  column-count: 3;
+  column-gap: 10px;
+}
+
+.image-gallery img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  .image-gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+@media (max-width: 1000px) {
+  .image-gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (max-width: 800px) {
+  .image-gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (max-width: 400px) {
+  .image-gallery {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+
+  .slideanim {
+    visibility: visible;
+    visibility: visible\9;
+    /*For old IE browsers IE6-8 */
+  }
+  @keyframes slide {
+    0% {
+      opacity: 1;
+      transform: translateY(10%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
